@@ -63,6 +63,7 @@ M.ui = {
     },
   },
 }
+--test
 
 M.plugins = "custom.plugins"
 M.mappings = require "custom.mappings"
