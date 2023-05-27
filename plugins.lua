@@ -50,14 +50,6 @@ local plugins = {
 
   -- Git tools
 
-  -- {
-  --   "kdheepak/lazygit.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("telescope").load_extension "lazygit"
-  --   end,
-  -- },
-
   {
     "TimUntersberger/neogit",
     event = "VeryLazy",
@@ -142,7 +134,6 @@ local plugins = {
     "mfussenegger/nvim-dap",
     event = "VeryLazy",
     dependencies = {
-      "rcarriga/nvim-dap-ui",
       "theHamsta/nvim-dap-virtual-text",
       "nvim-telescope/telescope-dap.nvim",
       "jbyuki/one-small-step-for-vimkind",
@@ -151,7 +142,7 @@ local plugins = {
 
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap" },
+    event = "VeryLazy",
     config = function()
       require("dapui").setup()
     end,
