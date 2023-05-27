@@ -62,17 +62,15 @@ local plugins = {
     "TimUntersberger/neogit",
     event = "VeryLazy",
     dependencies = {
-      "nvim-lua/plenary.nvim",
       "sindrets/diffview.nvim",
     },
     config = function()
       local neogit = require "neogit"
-
       neogit.setup {
         disable_signs = false,
         disable_hint = false,
         disable_context_highlighting = false,
-        disable_commit_confirmation = false,
+        disable_commit_confirmation = true,
         auto_refresh = true,
         sort_branches = "-committerdate",
         disable_builtin_notifications = false,
@@ -128,7 +126,6 @@ local plugins = {
         },
       },
     },
-    dependencies = { { "nvim-lua/plenary.nvim" } },
   },
 
   -- Telescope filter for mason
