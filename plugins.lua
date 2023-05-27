@@ -61,6 +61,10 @@ local plugins = {
   {
     "TimUntersberger/neogit",
     event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
+    },
     config = function()
       local neogit = require "neogit"
 
@@ -100,14 +104,6 @@ local plugins = {
           hunk = { "", "" },
         },
         integrations = {
-          {
-            "TimUntersberger/neogit",
-            dependencies = {
-              "nvim-lua/plenary.nvim",
-              "sindrets/diffview.nvim",
-            },
-          },
-          --
           diffview = true,
         },
       }
