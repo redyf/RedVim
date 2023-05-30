@@ -4,6 +4,12 @@ local plugins = {
     event = "VeryLazy",
     opts = {
       ensure_installed = {
+        "html-lsp",
+        "css-lsp",
+        "typescript-language-server",
+        "deno",
+        "prettierd",
+        "tailwindcss-language-server",
         "pyright",
         "lua-language-server",
         "nil_ls",
@@ -16,17 +22,18 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "c",
-        "cpp",
-        "bash",
         "html",
         "css",
         "javascript",
+        "typescript",
+        "tsx",
+        "bash",
+        "c",
+        "cpp",
         "python",
         "dart",
         "nix",
-        "elixir",
-        "clojure",
+        "markdown",
         "yaml",
         "toml",
       },
@@ -49,7 +56,6 @@ local plugins = {
   },
 
   -- Git tools
-
   {
     "TimUntersberger/neogit",
     event = "VeryLazy",
@@ -100,26 +106,6 @@ local plugins = {
     end,
   },
 
-  -- Neorg mode for note-taking system
-  {
-    "nvim-neorg/neorg",
-    event = "VeryLazy",
-    build = ":Neorg sync-parsers",
-    opts = {
-      load = {
-        ["core.defaults"] = {},  -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.dirman"] = {      -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              home = "~/notes/home/",
-            },
-          },
-        },
-      },
-    },
-  },
-
   -- Telescope filter for mason
   {
     "nvim-telescope/telescope-ui-select.nvim",
@@ -148,6 +134,7 @@ local plugins = {
     end,
   },
 
+  -- Custom debugger/adapter configurations for mason
   {
     "jay-babu/mason-nvim-dap.nvim",
     event = "VeryLazy",
@@ -159,31 +146,6 @@ local plugins = {
             require("mason-nvim-dap").default_setup(config)
           end,
           python = function(config)
-            -- config.adapters = {
-            --   type = "executable",
-            --   command = os.getenv "HOME" .. "/.virtualenvs/debugpy/bin/python",
-            --   args = { "-m", "debugpy.adapter" },
-            -- }
-            -- config.configurations = {
-            --   {
-            --     type = "python", -- the type here established the link to the adapter definition: `dap.adapters.python`
-            --     request = "launch",
-            --     name = "Launch file",
-            --
-            --     program = "${file}",
-            --     pythonPath = function()
-            --       local cwd = vim.fn.getcwd()
-            --       if vim.fn.executable(cwd .. "/venv/bin/python") == 1 then
-            --         return cwd .. "/venv/bin/python"
-            --       elseif vim.fn.executable(cwd .. "/.venv/bin/python") == 1 then
-            --         return cwd .. "/.venv/bin/python"
-            --       else
-            --         return "/home/redyf/.nix-profile/bin/python"
-            --       end
-            --     end,
-            --   },
-            -- }
-
             require("mason-nvim-dap").default_setup(config) -- don't forget this!
           end,
           dart = function(config)

@@ -15,19 +15,28 @@ local sources = {
   b.formatting.astyle,
   b.formatting.alejandra,
   b.formatting.black.with { extra_args = { "--fast" } },
-  b.formatting.clang_format,
   b.formatting.dart_format,
-  b.formatting.prettierd,
+  b.formatting.deno_fmt,
+  b.formatting.prettierd.with {
+    filetypes = {
+      "html",
+      "css",
+      "markdown",
+      "json",
+    },
+  },
   b.formatting.stylua,
   b.formatting.yamlfmt,
   b.formatting.zprint,
 
   -- diagnostics
-  b.diagnostics.statix,
-  b.diagnostics.flake8,
-  b.diagnostics.clj_kondo,
-  b.diagnostics.selene,
   b.diagnostics.cpplint,
+  b.diagnostics.clj_kondo,
+  b.diagnostics.deno_lint,
+  b.diagnostics.flake8,
+  b.diagnostics.selene,
+  b.diagnostics.statix,
+  b.diagnostics.stylelint,
   b.diagnostics.shellcheck,
 }
 
