@@ -1,5 +1,5 @@
+require "custom.configs.external.neovide"
 require "custom.extras"
--- require "custom.neovide"
 
 local opt = vim.opt
 local g = vim.g
