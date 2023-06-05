@@ -1,5 +1,5 @@
 require("mason-nvim-dap").setup {
-  ensure_installed = { "debugpy", "js-debug-adapter" },
+  ensure_installed = { "python", "js" },
   handlers = {
     function(config)
       require("mason-nvim-dap").default_setup(config)
@@ -7,6 +7,7 @@ require("mason-nvim-dap").setup {
     python = function(config)
       require("mason-nvim-dap").default_setup(config) -- don't forget this!
     end,
+
     dart = function(config)
       config.adapters = {
         type = "executable",

@@ -1,43 +1,17 @@
+---@diagnostic disable: different-requires
+local overrides = require "custom.configs.overrides"
+
 local plugins = {
   {
     "williamboman/mason.nvim",
     event = "VeryLazy",
-    opts = {
-      ensure_installed = {
-        "html-lsp",
-        "css-lsp",
-        "typescript-language-server",
-        "deno",
-        "prettierd",
-        "tailwindcss-language-server",
-        "pyright",
-        "lua-language-server",
-        "nil_ls",
-        "stylua",
-      },
-    },
+    opts = overrides.mason,
   },
 
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "html",
-        "css",
-        "javascript",
-        "typescript",
-        "tsx",
-        "bash",
-        "c",
-        "cpp",
-        "python",
-        "dart",
-        "nix",
-        "markdown",
-        "yaml",
-        "toml",
-      },
-    },
+    event = "VeryLazy",
+    opts = overrides.treesitter,
   },
 
   -- Lsp/Null-ls for codeactions/linters/formatters

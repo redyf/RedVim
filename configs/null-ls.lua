@@ -9,6 +9,7 @@ local b = null_ls.builtins
 local sources = {
   -- Code actions
   b.code_actions.gitsigns,
+  -- b.code_actions.eslint_d,
   -- Completion
   b.completion.luasnip,
   -- Formatters
@@ -16,15 +17,7 @@ local sources = {
   b.formatting.alejandra,
   b.formatting.black.with { extra_args = { "--fast" } },
   b.formatting.dart_format,
-  b.formatting.deno_fmt,
-  b.formatting.prettierd.with {
-    filetypes = {
-      "html",
-      "css",
-      "markdown",
-      "json",
-    },
-  },
+  b.formatting.prettierd,
   b.formatting.stylua,
   b.formatting.yamlfmt,
   b.formatting.zprint,
@@ -32,11 +25,11 @@ local sources = {
   -- diagnostics
   b.diagnostics.cpplint,
   b.diagnostics.clj_kondo,
-  b.diagnostics.deno_lint,
+  b.diagnostics.eslint_d,
   b.diagnostics.flake8,
   b.diagnostics.selene,
   b.diagnostics.statix,
-  b.diagnostics.stylelint,
+  -- b.diagnostics.stylelint,
   b.diagnostics.shellcheck,
 }
 

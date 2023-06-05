@@ -8,12 +8,19 @@ presence.setup {
   auto_update = true,
   neovim_image_text = "NvChad",
   enable_line_number = true,
-  -- main_image = "https://static-00.iconduck.com/assets.00/apps-neovim-icon-512x512-w4ecv3uh.png",
-  -- main_image = "https://camo.githubusercontent.com/7ef2897c4de6940f119595f50119a887b538d42d4a0b65a15bd0148e2b6bec5b/68747470733a2f2f692e696d6775722e636f6d2f654e62643975442e706e67",
   main_image = "file",
   log_level = nil,
   client_id = "793271441293967371",
   show_time = true,
+  debounce_timeout = 10,
+  blacklist = {},
+  buttons = true,
+  editing_text = "Editing %s",
+  file_explorer_text = "Browsing %s",
+  git_commit_text = "Committing changes",
+  plugin_manager_text = "Managing plugins",
+  reading_text = "Reading %s",
+  line_number_text = "Line %s out of %s",
   workspace_text = function()
     return "afk lul"
   end,
@@ -132,4 +139,6 @@ presence.setup {
       "https://avatars.githubusercontent.com/u/70907734?v=4",
     },
   },
+  -- main_image = "https://static-00.iconduck.com/assets.00/apps-neovim-icon-512x512-w4ecv3uh.png",
+  -- main_image = "https://camo.githubusercontent.com/7ef2897c4de6940f119595f50119a887b538d42d4a0b65a15bd0148e2b6bec5b/68747470733a2f2f692e696d6775722e636f6d2f654e62643975442e706e67",
 }
