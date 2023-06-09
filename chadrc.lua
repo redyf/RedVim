@@ -5,12 +5,12 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "oxocarbon",
+  theme = "catppuccin",
   transparency = false,
 
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
-    separator_style = "round",
+    theme = "default",         -- default/vscode/vscode_colored/minimal
+    separator_style = "block", -- default/round/block/arrow
     overriden_modules = nil,
   },
 

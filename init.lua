@@ -10,3 +10,4 @@ opt.backup = false
 opt.swapfile = false
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
+opt.shiftwidth = 2
