@@ -16,6 +16,6 @@ if vim.g.neovide then
   -- vim.o.guifont = "CaskaydiaCove Nerd Font:h12:b"
   -- vim.o.guifont = "JetBrainsMono Nerd Font:h12:b"
   -- vim.o.guifont = "FiraCode Nerd Font:h12:b"
-  vim.o.guifont = "SF Mono:h12:b"
+  vim.o.guifont = "Liga SFMono Nerd Font:h12"
   -- vim.o.guifont = "BlexMono Nerd Font Mono:h12:b"
 end
