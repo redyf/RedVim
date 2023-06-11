@@ -2,7 +2,7 @@
 local M = {}
 
 -- Path to overriding theme and highlights files
-local highlights = require "custom.highlights"
+local highlights = require "custom.configs.highlights"
 
 M.ui = {
   theme = "oxocarbon",
