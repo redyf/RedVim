@@ -113,6 +113,14 @@ M.dap = {
       end,
       "Toggle UI",
     },
+    ["<leader>dS"] = {
+      function()
+        local widgets = require "dap.ui.widgets"
+        local sidebar = widgets.sidebar(widgets.scopes)
+        sidebar.open()
+      end,
+      "Open debugging sidebar",
+    },
     ["<leader>du"] = {
       function()
         require("dap").step_out()

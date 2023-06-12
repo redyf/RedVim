@@ -13,13 +13,22 @@ end
 
 -- Enable LSPs here in case adding them to servers doesn't work
 
--- lspconfig.nil_ls.setup {}
--- lspconfig.denols.setup {}
---
--- require("lspconfig").rust_analyzer.setup {
+-- lspconfig.rust_analyzer.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
 --   cmd = { "rust-analyzer" },
 --   filetypes = { "rust" },
 --   root_dir = util.root_pattern("Cargo.toml", "rust-project.json"),
+--   settings = {
+--     ["rust-analyzer"] = {
+--       cargo = {
+--         allFeatures = true,
+--       },
+--       diagnostics = {
+--         enable = true,
+--       },
+--     },
+--   },
 -- }
 
 -- lspconfig.gopls.setup {

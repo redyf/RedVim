@@ -5,7 +5,7 @@ local M = {}
 local highlights = require "custom.configs.highlights"
 
 M.ui = {
-  theme = "oxocarbon",
+  theme = "catppuccin",
   transparency = false,
 
   statusline = {
