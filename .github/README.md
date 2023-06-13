@@ -9,10 +9,10 @@
     <a href="https://github.com/Redyf/nixdots/stargazers">
         <img src="https://img.shields.io/github/stars/Redyf/RedVim?color=ca9ee6&labelColor=303446&style=for-the-badge">
     </a>
-    <a href="https://github.com/PROxZIMA/.dotfiles/">
+    <a href="https://github.com/Redyf/nixdots">
         <img src="https://img.shields.io/github/repo-size/Redyf/RedVim?color=ea999c&labelColor=303446&style=for-the-badge">
     </a>
-    <a href="https://github.com/Redyf/RedVim/blob/master/LICENSE">
+    <a href="https://github.com/Redyf/RedVim/blob/main/.github/LICENCE">
         <img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=ca9ee6&colorA=313244&colorB=cba6f7"/>
     </a>
     <br>
@@ -45,11 +45,13 @@ Siga estes passos para instalar o RedVim:
 
 1. Certifique-se de ter o Neovim instalado em seu sistema. Consulte a documentação oficial do Neovim para obter instruções de instalação específicas para sua plataforma.
 
-2. Clone este repositório para o diretório de configuração do Neovim. No Linux e macOS, o caminho típico é `~/.config/nvim/`. No Windows, é `~/AppData/Local/nvim/`.
+2. Siga o processo de instalação do <a href="https://nvchad.com/docs/quickstart/install">NvChad</a> para poder atualizar o a configuração do editor quando necessário.
 
-3. Abra o Neovim. Serão instalados automaticamente os plugins necessários pela configuração RedVim. Aguarde até que todos os plugins sejam baixados e instalados.
+3. Clone este repositório para o diretório de configuração do Neovim. No Linux e macOS, o caminho típico é `~/.config/nvim/lua/custom/`. No Windows, é `~/AppData/Local/nvim/`.
 
-4. Reinicie o Neovim para carregar a configuração RedVim completamente.
+4. Abra o Neovim. Serão instalados automaticamente os plugins necessários pela configuração RedVim. Aguarde até que todos os plugins sejam baixados e instalados.
+
+5. Reinicie o Neovim para carregar a configuração RedVim completamente.
 
 ## Configuração
 
