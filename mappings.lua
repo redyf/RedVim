@@ -7,6 +7,12 @@ M.abc = {
     -- ["<C-s>"] = {":Telescope Files <CR>", "Telescope Files"},
     ["<leader>ww"] = { "<cmd> w <CR>", "save file" },
     ["<leader>q"] = { "<cmd> q <CR>", "close file" },
+    ["<leader>tr"] = {
+      function()
+        require("base46").toggle_transparency()
+      end,
+      "󰂵 Toggle transparency",
+    },
   },
 
   i = {
