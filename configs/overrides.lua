@@ -5,13 +5,11 @@ M.mason = {
     "html-lsp",
     "css-lsp",
     "typescript-language-server",
-    "deno",
     "prettierd",
     "tailwindcss-language-server",
     "pyright",
     "lua-language-server",
     "nil_ls",
-    "stylua",
   },
 }
 
@@ -29,8 +27,9 @@ M.treesitter = {
     "dart",
     "nix",
     "markdown",
-    "yaml",
     "toml",
+    "yaml",
+    "yuck",
   },
 }
 

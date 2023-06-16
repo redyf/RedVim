@@ -13,6 +13,9 @@ end
 
 -- Enable LSPs here in case adding them to servers doesn't work
 
+require("lspconfig").clojure_lsp.setup {
+  filetypes = { "yuck" },
+}
 -- lspconfig.rust_analyzer.setup {
 --   on_attach = on_attach,
 --   capabilities = capabilities,

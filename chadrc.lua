@@ -9,7 +9,7 @@ M.ui = {
   transparency = false,
 
   statusline = {
-    theme = "default",         -- default/vscode/vscode_colored/minimal
+    theme = "default", -- default/vscode/vscode_colored/minimal
     separator_style = "block", -- default/round/block/arrow
     overriden_modules = nil,
   },
@@ -25,8 +25,8 @@ M.ui = {
   cmp = {
     icons = true,
     lspkind_text = true,
-    style = "default",            -- default/flat_light/flat_dark/atom/atom_colored
-    border_color = "default",     -- only applicable for "default" style, use color names from base30 variables
+    style = "default", -- default/flat_light/flat_dark/atom/atom_colored
+    border_color = "default", -- only applicable for "default" style, use color names from base30 variables
     selected_item_bg = "colored", -- colored / simple
   },
 
