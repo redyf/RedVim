@@ -3,11 +3,6 @@ local M = {}
 
 -- Path to overriding theme and highlights files
 local highlights = require "custom.configs.highlights"
--- require("bufferline").setup {
---   enabled = true;
---   preselect = 'enabled';
---   options = {},
--- }
 
 M.ui = {
   changed_themes = {
@@ -32,27 +27,37 @@ M.ui = {
         base0F = "#d9e0ee", -- Brackets, commas on other files
       },
       base_30 = {
-        black = "#292A37", -- Background color
-        black2 = "#252632", -- Background darker
+        white = "#d9e0ee", -- Active line + filename on topbar color
+        darker_black = "#252632", -- Which-key plugin background
+        black = "#292A37", -- Active tab background color
+        black2 = "#252632", -- Inactive tab background color
         one_bg = "#292a37", -- real bg of jabuti
-        one_bg2 = "#2e303e",
+        one_bg2 = "#2e303e", -- Table highlight color
         one_bg3 = "#303241",
-        green = "#3FC6DE",
-        vibrant_green = "#08bdba",
-        red = "#ec6a88",
-        cyan = "#6be6e6",
-        pmenu_bg = "#6be6e6",
-        blue = "#78a9ff", -- Vim symbol + filetype icons color
-        nord_blue = "#78a9ff", -- Vim symbol color in bottom line (if using default)
-        folder_bg = "#78a9ff", -- Folder bg
-        statusline_bg = "#292A37", -- Statusline bg
-        purple = "#936FDC",
-        dark_purple = "#936FDC",
-        baby_pink = "#ff7eb6", -- Brackets
-        grey_fg = "#9699b7", -- Comments
+        grey = "#393a4d", -- Line number color
+        grey_fg = "#44465c", -- Comments color
         grey_fg2 = "#9699b7",
         light_grey = "#44465c",
-        white = "#d9e0ee",
+        red = "#ec6a88",
+        baby_pink = "#ff7eb6", -- Brackets
+        pink = "#be95ff",
+        line = "#383747", -- for lines like vertsplit
+        green = "#3FC6DE",
+        vibrant_green = "#08bdba",
+        nord_blue = "#78a9ff", -- Vim symbol color in bottom line (if using default)
+        blue = "#78a9ff", -- Vim symbol + filetype icons color
+        yellow = "#efb993",
+        sun = "#efb993",
+        purple = "#936FDC",
+        dark_purple = "#936FDC",
+        teal = "#B5E8E0",
+        orange = "#efb993",
+        cyan = "#6be6e6",
+        statusline_bg = "#292A37", -- Statusline bg
+        lightbg = "#292a37",
+        pmenu_bg = "#6be6e6",
+        folder_bg = "#78a9ff", -- Folder bg
+        lavender = "#c7d1ff",
       },
       --   oxocarbon base 30 for reference
       --   white = "#f2f4f8",
@@ -116,25 +121,6 @@ M.ui = {
       --  local comment        = '#9699b7'
     },
   },
-  -- Oxocarbon base 16 for reference
-  --   M.base_16 = {
-  --   base00 = "#161616",
-  --   base01 = "#262626",
-  --   base02 = "#393939",
-  --   base03 = "#525252",
-  --   base04 = "#dde1e6",
-  --   base05 = "#f2f4f8",
-  --   base06 = "#ffffff",
-  --   base07 = "#08bdba",
-  --   base08 = "#3ddbd9",
-  --   base09 = "#78a9ff",
-  --   base0A = "#ee5396",
-  --   base0B = "#33b1ff",
-  --   base0C = "#ff7eb6",
-  --   base0D = "#42be65",
-  --   base0E = "#be95ff",
-  --   base0F = "#82cfff",
-  -- }
   theme = "oxocarbon",
   transparency = false,
 
