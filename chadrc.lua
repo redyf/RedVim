@@ -4,6 +4,8 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require "custom.configs.highlights"
 -- require("bufferline").setup {
+--   enabled = true;
+--   preselect = 'enabled';
 --   options = {},
 -- }
 
@@ -11,21 +13,23 @@ M.ui = {
   changed_themes = {
     oxocarbon = {
       base_16 = {
+        -- Jabuti base 16
         base00 = "#292A37", -- Background color
         base01 = "#252632", -- Background darker
         base02 = "#393a4d", -- Grey dark
         base03 = "#44465c", -- Grey light
         base04 = "#dde1e6",
-        base05 = "#6be6e6", -- Packages color
+        base05 = "#6be6e6", -- Filename, = sign and pkgs color
         base06 = "#ffffff",
         base07 = "#08bdba",
         base08 = "#ec6a88", -- variable color
         base09 = "#efb993", -- true/false color
-        base0A = "#ec6a88",
-        base0B = "#3FDAA4",
+        base0A = "#ec6a88", -- search highlight color
+        base0B = "#3FDAA4", -- quotes color
         base0C = "#ff7eb6", -- Brackets
-        base0D = "#3FC6DE",
-        base0E = "#936FDC",
+        base0D = "#3FC6DE", -- require color
+        base0E = "#936FDC", -- local variable color
+        base0F = "#d9e0ee", -- Brackets, commas on other files
       },
       base_30 = {
         black = "#292A37", -- Background color
@@ -34,10 +38,11 @@ M.ui = {
         one_bg2 = "#2e303e",
         one_bg3 = "#303241",
         green = "#3FC6DE",
+        vibrant_green = "#08bdba",
         red = "#ec6a88",
         cyan = "#6be6e6",
         pmenu_bg = "#6be6e6",
-        blue = "#3FDAA4",
+        blue = "#78a9ff", -- Vim symbol + filetype icons color
         nord_blue = "#78a9ff", -- Vim symbol color in bottom line (if using default)
         folder_bg = "#78a9ff", -- Folder bg
         statusline_bg = "#292A37", -- Statusline bg
@@ -47,18 +52,9 @@ M.ui = {
         grey_fg = "#9699b7", -- Comments
         grey_fg2 = "#9699b7",
         light_grey = "#44465c",
-        -- local light_grey     = '#44465c'
-        -- local grey           = '#9699b7'
-        -- local grey_dark      = '#393a4d'
-        -- local fg             = '#d9e0ee'
-        -- local fg_light       = '#d9e0ee'
-        -- local fg_dark        = '#d9e0ee'
-        -- local hollow         = '#393a4d'
-        -- local hollow_lighter = '#393a4d'
-        -- local white          = '#d9e0ee'
-        -- local comment        = '#9699b7'
+        white = "#d9e0ee",
       },
-      --   oxocarbon
+      --   oxocarbon base 30 for reference
       --   white = "#f2f4f8",
       --   darker_black = "#0f0f0f",
       --   black = "#161616", --  nvim bg
@@ -120,6 +116,7 @@ M.ui = {
       --  local comment        = '#9699b7'
     },
   },
+  -- Oxocarbon base 16 for reference
   --   M.base_16 = {
   --   base00 = "#161616",
   --   base01 = "#262626",
