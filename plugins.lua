@@ -30,6 +30,8 @@ local plugins = {
     end,
   },
 
+  -- Colorschemes
+
   -- Rust plugins
   {
     "rust-lang/rust.vim",
