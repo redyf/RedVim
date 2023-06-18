@@ -1,44 +1,73 @@
--- atheme.lua file be like
--- black = usually your theme bg 
--- darker_black = 6% darker than black
--- black2 = 6% lighter than black
---
--- onebg = 10% lighter than black
--- oneb2 = 19% lighter than black
--- oneb3 = 27% lighter than black
---
--- grey = 40% lighter than black (the % here depends so choose the perfect grey!)
--- grey_fg = 10% lighter than grey
--- grey_fg2 = 20% lighter than grey
--- light_grey = 28% lighter than grey
---
--- baby_pink = 15% lighter than red or any babypink color you like!
--- line = 15% lighter than black 
---
--- nord_blue = 13% darker than blue 
--- sun = 8% lighter than yellow
---
--- statusline_bg = 4% lighter than black
--- lightbg = 13% lighter than statusline_bg
--- lightbg2 = 7% lighter than statusline_bg
---
--- folder_bg = blue color
---
+-- Credits to original theme for existing https://github.com/shaunsingh/oxocarbon.nvim
+-- this is a modified version of it
+
 local M = {}
 
 M.base_30 = {
-  -- some colors
+  white = "#d9e0ee",
+  darker_black = "#252632",
+  black = "#292A37",
+  black2 = "#252632",
+  one_bg = "#292a37",
+  one_bg2 = "#2e303e",
+  one_bg3 = "#303241",
+  grey = "#393a4d",
+  grey_fg = "#44465c",
+  grey_fg2 = "#9699b7",
+  light_grey = "#44465c",
+  red = "#ec6a88",
+  baby_pink = "#ff7eb6",
+  pink = "#be95ff",
+  line = "#383747",
+  green = "#3FC6DE",
+  vibrant_green = "#08bdba",
+  nord_blue = "#78a9ff",
+  blue = "#78a9ff",
+  yellow = "#efb993",
+  sun = "#efb993",
+  purple = "#936FDC",
+  dark_purple = "#936FDC",
+  teal = "#B5E8E0",
+  orange = "#efb993",
+  cyan = "#6be6e6",
+  statusline_bg = "#292A37",
+  lightbg = "#292a37",
+  pmenu_bg = "#6be6e6",
+  folder_bg = "#78a9ff",
+  lavender = "#c7d1ff",
 }
 
 M.base_16 = {
-  base00 = "#292a37"
-  base01 = "#303241"
-  base02 = '#2e303e'
-  base03 = '#9699b7'
+  base00 = "#292A37",
+  base01 = "#252632",
+  base02 = "#393a4d",
+  base03 = "#44465c",
+  base04 = "#dde1e6",
+  base05 = "#6be6e6",
+  base06 = "#ffffff",
+  base07 = "#08bdba",
+  base08 = "#ec6a88",
+  base09 = "#efb993",
+  base0A = "#ec6a88",
+  base0B = "#3FDAA4",
+  base0C = "#ff7eb6",
+  base0D = "#3FC6DE",
+  base0E = "#936FDC",
+  base0F = "#d9e0ee",
 }
 
-M.type = "dark" -- this can be either dark or light
+M.polish_hl = {
+  Conditional = {
+    fg = M.base_30.nord_blue,
+  },
 
-M = require("base46").override_theme(M, "atheme")
+  Tag = {
+    fg = M.base_30.white,
+  },
+}
+
+M.type = "dark"
+
+M = require("base46").override_theme(M, "jabuti")
 
 return M
