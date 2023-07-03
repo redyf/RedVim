@@ -30,8 +30,6 @@ local plugins = {
     end,
   },
 
-  -- Colorschemes
-
   -- Rust plugins
   {
     "rust-lang/rust.vim",
@@ -56,16 +54,16 @@ local plugins = {
   },
 
   -- Git tools
-  {
-    "TimUntersberger/neogit",
-    event = "VeryLazy",
-    dependencies = {
-      "sindrets/diffview.nvim",
-    },
-    config = function()
-      require "custom.configs.external.neogit"
-    end,
-  },
+  -- {
+  --   "TimUntersberger/neogit",
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     "sindrets/diffview.nvim",
+  --   },
+  --   config = function()
+  --     require "custom.configs.external.neogit"
+  --   end,
+  -- },
 
   -- Telescope filter for mason
   {
@@ -101,6 +99,16 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require "custom.configs.external.mason-nvim-dap"
+    end,
+  },
+
+  -- Quality of life
+  -- TODO: Timeout must be equal or greater than 100
+  {
+    "max397574/better-escape.nvim",
+    event = "VeryLazy",
+    config = function()
+      require "custom.configs.external.better-escape"
     end,
   },
 

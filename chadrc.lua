@@ -6,7 +6,7 @@ local highlights = require "custom.configs.highlights"
 
 -- M.ui = {
 --   changed_themes = {
---     oxocarbon = {
+--     jabuti = {
 --       base_16 = {
 --         -- Jabuti base 16
 --         base00 = "#292A37", -- Background color
@@ -44,7 +44,7 @@ local highlights = require "custom.configs.highlights"
 --         line = "#383747", -- for lines like vertsplit
 --         green = "#3FC6DE",
 --         vibrant_green = "#08bdba",
---         nord_blue = "#78a9ff", -- Vim symbol color in bottom line (if using default)
+--         nord_blue = "#78a9ff", -- Vim symbol color in bottom line (if using defaulttheme for statusline)
 --         blue = "#78a9ff", -- Vim symbol + filetype icons color
 --         yellow = "#efb993",
 --         sun = "#efb993",
@@ -59,75 +59,14 @@ local highlights = require "custom.configs.highlights"
 --         folder_bg = "#78a9ff", -- Folder bg
 --         lavender = "#c7d1ff",
 --       },
---       --   oxocarbon base 30 for reference
---       --   white = "#f2f4f8",
---       --   darker_black = "#0f0f0f",
---       --   black = "#161616", --  nvim bg
---       --   black2 = "#202020",
---       --   one_bg = "#2a2a2a", -- real bg of onedark
---       --   one_bg2 = "#343434",
---       --   one_bg3 = "#3c3c3c",
---       --   grey = "#464646",
---       --   grey_fg = "#4c4c4c",
---       --   grey_fg2 = "#555555",
---       --   light_grey = "#5f5f5f",
---       --   red = "#ee5396",
---       --   baby_pink = "#ff7eb6",
---       --   pink = "#be95ff",
---       --   line = "#383747", -- for lines like vertsplit
---       --   green = "#42be65",
---       --   vibrant_green = "#08bdba",
---       --   nord_blue = "#78a9ff",
---       --   blue = "#33b1ff",
---       --   yellow = "#FAE3B0",
---       --   sun = "#ffe9b6",
---       --   purple = "#d0a9e5",
---       --   dark_purple = "#c7a0dc",
---       --   teal = "#B5E8E0",
---       --   orange = "#F8BD96",
---       --   cyan = "#3ddbd9",
---       --   statusline_bg = "#202020",
---       --   lightbg = "#2a2a2a",
---       --   pmenu_bg = "#3ddbd9",
---       --   folder_bg = "#78a9ff",
---       --   lavender = "#c7d1ff",
---
---       --  jabuti
---       --  local bg             = '#292a37'
---       --  local bg_dark        = '#292a37'
---       --  local bg_darker      = '#252632'
---       --  local bg_light       = '#2e303e'
---       --  local bg_lighter     = '#303241'
---       --  local light_grey     = '#44465c'
---       --  local grey           = '#9699b7'
---       --  local grey_dark      = '#393a4d'
---       --  local red            = '#ec6a88'
---       --  local heavy_red      = '#e95678'
---       --  local green          = '#3fdaa4'
---       --  local blue           = '#3fc6de'
---       --  local blue_light     = '#26bbd9'
---       --  local yellow         = '#efb993'
---       --  local orange         = '#efb993'
---       --  local magenta        = '#b072d1'
---       --  local pink           = '#b771dc'
---       --  local cyan           = '#6be6e6'
---       --  local cyan_dark      = '#59e3e3'
---       --  local fg             = '#d9e0ee'
---       --  local fg_light       = '#d9e0ee'
---       --  local fg_dark        = '#d9e0ee'
---       --  local hollow         = '#393a4d'
---       --  local hollow_lighter = '#393a4d'
---       --  local white          = '#d9e0ee'
---       --  local comment        = '#9699b7'
---     },
---   },
+---       TODO: Colors for git options (add, commit, push).
 M.ui = {
 
   theme = "jabuti",
   transparency = false,
 
   statusline = {
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+    theme = "minimal", -- default/vscode/vscode_colored/minimal
     separator_style = "block", -- default/round/block/arrow
     overriden_modules = nil,
   },

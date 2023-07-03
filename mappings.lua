@@ -4,7 +4,7 @@ local M = {}
 M.abc = {
   n = {
     -- ["<C-n>"] = {"<cmd> Telescope <CR>", "Telescope"},
-    -- ["<C-s>"] = {":Telescope Files <CR>", "Telescope Files"},
+    -- ["<C-s>"] = { ":Telescope Files <CR>", "Telescope Files" },
     ["<leader>ww"] = { "<cmd> w <CR>", "save file" },
     ["<leader>q"] = { "<cmd> q <CR>", "close file" },
     ["<leader>tr"] = {
@@ -13,10 +13,6 @@ M.abc = {
       end,
       "󰂵 Toggle transparency",
     },
-  },
-
-  i = {
-    ["jk"] = { "<ESC>", "escape insert mode", opts = { nowait = true } },
   },
 }
 

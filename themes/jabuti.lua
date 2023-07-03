@@ -1,10 +1,7 @@
--- Credits to original theme for existing https://github.com/shaunsingh/oxocarbon.nvim
--- this is a modified version of it
-
 local M = {}
 
 M.base_30 = {
-  white = "#d9e0ee",
+  white = "#d9e0ee", -- original
   darker_black = "#252632",
   black = "#292A37",
   black2 = "#252632",
@@ -31,7 +28,7 @@ M.base_30 = {
   orange = "#efb993",
   cyan = "#6be6e6",
   statusline_bg = "#292A37",
-  lightbg = "#292a37",
+  lightbg = "#292A37",
   pmenu_bg = "#6be6e6",
   folder_bg = "#78a9ff",
   lavender = "#c7d1ff",
@@ -62,7 +59,7 @@ M.polish_hl = {
   },
 
   Tag = {
-    fg = M.base_30.white,
+    fg = M.base_30.red,
   },
 }
 
