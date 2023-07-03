@@ -23,7 +23,10 @@
 <h1 align="center">🩸 RedVim 🩸</h1>
 <h2 align="center">Minha configuração personalizada do <a href="https://nvchad.com/">NvChad</a>. Sinta-se livre para explorar!</h2>
 <h3 align="center">
-    
+
+Features Completely remade <a href="https://github.com/jabuti-theme">jabuti-theme</a> with base46 for NvChad (should be available in a few months)
+![image](https://github.com/Redyf/RedVim/assets/98139059/76c83767-7ab1-4f75-b418-8da0f2b3e4c8)
+Catppuccin Built-in theme
 ![image](https://github.com/Redyf/RedVim/assets/98139059/3df08f0f-e6b6-416f-9edf-4201f0b88567)
 
 </h3>
