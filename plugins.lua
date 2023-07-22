@@ -30,50 +30,6 @@ local plugins = {
     end,
   },
 
-  -- Rust plugins
-  {
-    "rust-lang/rust.vim",
-    event = "VeryLazy",
-    ft = "rust",
-    init = function()
-      vim.g.rustfmt_autosave = 1
-    end,
-  },
-
-  {
-    "simrat39/rust-tools.nvim",
-    event = "VeryLazy",
-    ft = "rust",
-    dependencies = "neovim/nvim-lspconfig",
-    opts = function()
-      return require "custom.configs.rust-tools"
-    end,
-    config = function(_, opts)
-      require("rust-tools").setup(opts)
-    end,
-  },
-
-  -- Git tools
-  -- {
-  --   "TimUntersberger/neogit",
-  --   event = "VeryLazy",
-  --   dependencies = {
-  --     "sindrets/diffview.nvim",
-  --   },
-  --   config = function()
-  --     require "custom.configs.external.neogit"
-  --   end,
-  -- },
-
-  -- Telescope filter for mason
-  {
-    "nvim-telescope/telescope-ui-select.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("telescope").load_extension "ui-select"
-    end,
-  },
-
   -- Debug plugins
   {
     "mfussenegger/nvim-dap",
@@ -99,6 +55,50 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require "custom.configs.external.mason-nvim-dap"
+    end,
+  },
+
+  -- Rust plugins
+  {
+    "rust-lang/rust.vim",
+    event = "VeryLazy",
+    ft = "rust",
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end,
+  },
+
+  {
+    "simrat39/rust-tools.nvim",
+    event = "VeryLazy",
+    ft = "rust",
+    dependencies = "neovim/nvim-lspconfig",
+    opts = function()
+      return require "custom.configs.rust-tools"
+    end,
+    config = function(_, opts)
+      require("rust-tools").setup(opts)
+    end,
+  },
+
+  -- Git tools
+  {
+    "TimUntersberger/neogit",
+    event = "VeryLazy",
+    dependencies = {
+      "sindrets/diffview.nvim",
+    },
+    config = function()
+      require "custom.configs.external.neogit"
+    end,
+  },
+
+  -- Telescope filter for mason
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("telescope").load_extension "ui-select"
     end,
   },
 
@@ -132,6 +132,10 @@ local plugins = {
     config = function()
       require "custom.configs.external.presence"
     end,
+  },
+  {
+    "wakatime/vim-wakatime",
+    event = "VeryLazy",
   },
 }
 

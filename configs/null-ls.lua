@@ -14,8 +14,8 @@ local sources = {
 
   -- diagnostics
   b.diagnostics.cpplint,
-  b.diagnostics.clj_kondo,
-  b.diagnostics.eslint_d,
+  -- b.diagnostics.clj_kondo,
+  -- b.diagnostics.eslint_d,
   b.diagnostics.flake8,
   b.diagnostics.selene,
   b.diagnostics.statix,

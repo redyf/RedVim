@@ -6,7 +6,7 @@ end
 
 presence.setup {
   auto_update = true,
-  neovim_image_text = "NvChad",
+  neovim_image_text = "I wasn't expecting you here but... Hi!",
   main_image = "file",
   client_id = "793271441293967371",
   log_level = nil,

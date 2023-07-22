@@ -10,6 +10,7 @@ M.mason = {
     "pyright",
     "lua-language-server",
     "nil_ls",
+    "clangd",
   },
 }
 

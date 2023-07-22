@@ -7,6 +7,9 @@ require("mason-nvim-dap").setup {
     python = function(config)
       require("mason-nvim-dap").default_setup(config) -- don't forget this!
     end,
+    codelldb = function(config)
+      require("mason-nvim-dap").default_setup(config)
+    end,
     dart = function(config)
       config.adapters = {
         type = "executable",
