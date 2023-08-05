@@ -92,6 +92,14 @@ local plugins = {
       require "custom.configs.external.neogit"
     end,
   },
+  -- Quality of life
+  {
+    "max397574/better-escape.nvim",
+    event = "VeryLazy",
+    config = function()
+      require "custom.configs.external.better-escape"
+    end,
+  },
 
   -- Telescope filter for mason
   {
@@ -99,16 +107,6 @@ local plugins = {
     event = "VeryLazy",
     config = function()
       require("telescope").load_extension "ui-select"
-    end,
-  },
-
-  -- Quality of life
-  -- TODO: Timeout must be equal or greater than 100
-  {
-    "max397574/better-escape.nvim",
-    event = "VeryLazy",
-    config = function()
-      require "custom.configs.external.better-escape"
     end,
   },
 
@@ -136,6 +134,91 @@ local plugins = {
   {
     "wakatime/vim-wakatime",
     event = "VeryLazy",
+  },
+  -- Github Copilot
+  {
+    "hrsh7th/nvim-cmp",
+    opts = overrides.cmp,
+    dependencies = {
+      -- "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+      "f3fora/cmp-spell",
+      -- "hrsh7th/cmp-vsnip",
+      "delphinus/cmp-ctags",
+      "hrsh7th/cmp-nvim-lsp-document-symbol",
+      "hrsh7th/cmp-copilot",
+      "ray-x/cmp-treesitter",
+      {
+        "hrsh7th/cmp-cmdline",
+        event = "CmdLineEnter",
+      },
+    },
+  },
+  {
+    "jonahgoldwastaken/copilot-status.nvim",
+    dependencies = { "copilot.lua" },
+    event = "BufReadPost",
+    config = function()
+      require("copilot_status").setup {
+        icons = {
+          idle = " ",
+          error = " ",
+          offline = " ",
+          warning = "𥉉 ",
+          loading = " ",
+        },
+        debug = false,
+      }
+    end,
+  },
+
+  {
+    "github/copilot.vim",
+    event = "VeryLazy",
+    config = function()
+      require "custom.configs.copilot"
+    end,
+  },
+
+  {
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    dependencies = {
+      {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+      },
+    },
+    config = function()
+      require("copilot").setup {
+        suggestion = {
+          enabled = false,
+          auto_trigger = false,
+          keymap = {
+            -- accept = "<Tab>",
+            accept_word = false,
+            accept_line = false,
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
+          },
+        },
+        panel = {
+          enabled = false,
+        },
+        server_opts_overrides = {
+          trace = "verbose",
+          settings = {
+            advanced = {
+              listCount = 3,
+              inlineSuggestCount = 3,
+            },
+          },
+        },
+      }
+    end,
   },
 }
 
